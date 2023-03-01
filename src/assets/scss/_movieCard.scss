@@ -1,0 +1,26 @@
+.movie-card{
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    margin: 1vw;
+    text-align: center;
+
+    .movie-image{
+        
+    }
+    .movie-textbox{
+        display: flex;
+        flex-direction: column;
+        .movie-title{
+            margin: 1vh 0;
+        }
+        .movie-overview{
+        display: none;
+    }
+        .movie-text{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    
+}

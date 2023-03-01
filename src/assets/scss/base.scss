@@ -1,1 +1,11 @@
-@import './home'
+@import'./home';
+@import'./movieCard';
+@import'./mainNavbar';
+@import'./footer';
+@import'./hero';
+
+/*-----Global----*/
+
+body{
+    margin: 0 0vw;
+}
