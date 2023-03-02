@@ -1,0 +1,30 @@
+.main-navbar{
+    display: flex;
+    flex-direction: column;
+
+    .top-navbar{
+        display: flex;
+        justify-content: center;
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 40vw;
+            margin: 1vw 0;
+
+        .nav-links{
+            list-style: none;
+            font-size: 20px;
+        }
+    }
+    }
+
+    .bottom-navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 10vw;
+    }
+    
+}
