@@ -1,9 +1,15 @@
 import React from 'react'
+import axios from 'axios'
 
 const MovieCard = ({
     movie: {id, original_language, original_title, overview, popularity, 
         poster_path, release_date, title, vote_average, vote_count}}) => {
 
+
+    const addToWatchList = (id) => {
+        console.log(id)
+        axios.post('http://localhost:3001/insert', {filmId: id, filmName:original_title,})
+        }
 
   return (
     <div className="movie-card">
@@ -20,7 +26,7 @@ const MovieCard = ({
                 <p className="movie-overview">{overview}</p>
                 <p className="movie-language">{original_language}</p>
             </div>
-            
+            <button onClick={addToWatchList(id)}>Add To List</button>
         </div>
        
     </div>
