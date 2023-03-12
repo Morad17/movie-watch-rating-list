@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
 const MovieCard = ({
@@ -7,9 +7,15 @@ const MovieCard = ({
 
 
     const addToWatchList = (id) => {
+        if (id) {
+        axios.post('http://localhost:3001/insert', {filmId: id})
         console.log(id)
-        axios.post('http://localhost:3001/insert', {filmId: id, filmName:original_title,})
         }
+        
+        }
+
+    const [movieId, setMovieId ] = useState(null)
+
 
   return (
     <div className="movie-card">
@@ -26,7 +32,7 @@ const MovieCard = ({
                 <p className="movie-overview">{overview}</p>
                 <p className="movie-language">{original_language}</p>
             </div>
-            <button onClick={addToWatchList(id)}>Add To List</button>
+            <button onClick={() => addToWatchList(id)}>Add To List</button>
         </div>
        
     </div>
